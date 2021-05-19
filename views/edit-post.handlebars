@@ -1,0 +1,27 @@
+<article class="card">
+    <h2 class="card-header">Edit Post</h2>
+    <form class="edit-post-form card-body">
+        <div>
+            <input name="post-title" type="text" value="{{post.title}}" class="long-input" /><br> <br>
+            <textarea name="post-body">{{post.body_content}}</textarea>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-secondary">Save post</button>
+        <button type="button" class="delete-post-btn btn btn-danger" >Delete post</button>
+    </form>
+</article>
+
+<form action="" class="comment-form card">
+    <h3 class="card-header">Add Comment</h3>
+    <div class="card-body">
+        <textarea name="comment-body" id="comment-textarea"></textarea>
+        <br>
+        <button type="submit" class="btn btn-secondary">add comment</button>
+    </div>
+</form>
+
+{{> comments post.comments}}
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>
