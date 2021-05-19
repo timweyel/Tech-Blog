@@ -1,58 +1,12 @@
-h2 {
-  margin-left: 20px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.jumbotron {
-  background-color: #47484c;
-  color: white;
-  margin-bottom: 0;
+h1 {
+  text-align: center;
 }
 
-.search {
-  height: 100vh;
-}
-
-.fas, .fa-search {
-  color: white;
-}
-
-.list-group-item{
-  line-height: 0.5;
-  border: none;
-}
-
-.card {
-  margin: 15px;
-  justify-content: space-between;
-}
-
-.card-header {
-  background-color: white;
-}
-
-.card-width {
-  width: 15rem;
-}
-
-.card-body {
-  margin: 0 auto;
-}
-
-.favorable {
-  background-color: green;
-  padding: 5px;
-}
-
-.moderate {
-  background-color: yellow;
-  padding: 5px;
-}
-
-.severe {
-  background-color: red;
-  padding: 5px;
-}
-
-#five-day-forecast-container {
-  margin-top: 25px;
+nav {
+  margin: 0 50px;
 }
