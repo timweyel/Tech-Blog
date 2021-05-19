@@ -44,12 +44,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: [
-            'id',
-            'title',
-            'body_content',
-            'created_at'
-        ]
+        attributes: ['id', 'title', 'body_content', 'created_at']
     })
     .then(dbPostData => {
         const post = dbPostData.get({ plain: true });
