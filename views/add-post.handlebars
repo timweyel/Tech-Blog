@@ -1,0 +1,31 @@
+{{!-- post --}}
+<article class="post card">
+    <div class="post-title card-header">
+        <h3>{{post.title}}</h3>
+    </div>
+    <div class="card-body">
+        <div class="post-body">
+            {{post.body_content}}
+        </div>
+        <div class="meta">
+            by {{post.user.username}} on
+        {{format_date post.created_at}}
+        </div>
+    </div>
+</article>
+
+{{!-- comments --}}
+{{#if loggedIn}}
+<form class="comment-form card">
+    <h2 class="card-header">Add a Comment</h2>
+    <div class="card-body">
+        <textarea name="comment-body"></textarea>
+        <br>
+        <button type="submit" class="comment-btn btn btn-secondary">Add comment</button>
+    </div>
+</form>
+{{/if}}
+    {{>comments post.comments}}
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
