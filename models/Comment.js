@@ -1,3 +1,5 @@
+const User = require('./User');
+const Post = require('./Post');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -11,7 +13,7 @@ Comment.init(
         primaryKey: true,
         autoIncrement: true
     },
-    comment_text: {
+    content: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: { 

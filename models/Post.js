@@ -18,12 +18,9 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      post_url: {
+      body_content: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isURL: true
-        }
+        allowNull: false
       },
       user_id: {
         type: DataTypes.INTEGER,
@@ -34,6 +31,7 @@ Post.init(
       }
     },
     {
+      hooks: true,
       sequelize,
       freezeTableName: true,
       underscored: true,
